@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "build_test": "pnpm run build && pnpm run test",
     "preview": "vite preview",
     "test": "mocha tests/dist_ensure_exec.test.mjs"
   },
