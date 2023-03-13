@@ -11,3 +11,10 @@ vite-verify-treeshaking-demo. can be used to publish as well
 
 # Vite deploy demo - github actions
 https://github.com/sitek94/vite-deploy-demo
+
+# Trying
+https://github.com/nodeca/js-yaml
+```bash
+pnpm add js-yaml
+# not using -D for a reason
+```
