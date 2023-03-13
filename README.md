@@ -9,3 +9,5 @@ vite-verify-treeshaking-demo. can be used to publish as well
 3. jsconfig.json
   * for webstorm
 
+# Vite deploy demo - github actions
+https://github.com/sitek94/vite-deploy-demo
