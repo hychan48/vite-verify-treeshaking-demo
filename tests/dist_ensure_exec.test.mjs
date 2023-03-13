@@ -10,6 +10,8 @@ describe('dist_ensure_exec.test.mjs', function(){
   it('run', function(){
     assert.strictEqual(dist_run(),'hi')
   });
-  // 33kb with bigTreeShakingFile. it doesnt import if it's not used
+  // 33kb with bigTreeShakingFile. it doesn't import if it's not used
+  // about 1kb minified. so nice
+
 
 });
