@@ -22,7 +22,8 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v3
         with:
-          node-version: 18
+          node-version: 16
+#          node-version: 18 # get warning
       
       # https://github.com/bahmutov/npm-install
       # not sure why a special package
@@ -39,7 +40,7 @@ jobs:
         id: pnpm-install
         with:
           version: 7
-          # https://www.npmjs.com/package/pnpm. 
+          # https://www.npmjs.com/package/pnpm.
           # at the time of writing ersion 7.29.1
           run_install: false
 
@@ -58,7 +59,7 @@ jobs:
             ${{ runner.os }}-pnpm-store-
 
       - name: Install dependencies
-        run: pnpm install      
+        run: pnpm install
       
       - name: Build project
         run: pnpm run build
@@ -70,20 +71,20 @@ jobs:
           name: production-files
           path: ./dist
 
-# Not deploying right now  
+# Not deploying right now
   # deploy:
   #   name: Deploy
   #   needs: build
   #   runs-on: ubuntu-latest
   #   if: github.ref == 'refs/heads/main'
-    
+  
   #   steps:
   #     - name: Download artifact
   #       uses: actions/download-artifact@v2
   #       with:
   #         name: production-files
   #         path: ./dist
-      
+  
   #     - name: Deploy to GitHub Pages
   #       uses: peaceiris/actions-gh-pages@v3
   #       with:
