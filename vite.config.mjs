@@ -6,6 +6,7 @@ export default defineConfig({
   define: { 'process.env': {} },
   resolve: {
     alias: {
+      //https://vitejs.dev/guide/build.html#library-mode
       '##': fileURLToPath(new URL('./src', import.meta.url)),
       '##cwd': fileURLToPath(new URL('./',import.meta.url))
     },
