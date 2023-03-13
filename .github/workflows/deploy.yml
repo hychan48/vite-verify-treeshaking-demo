@@ -44,6 +44,7 @@ jobs:
           # at the time of writing ersion 7.29.1
           run_install: false
 
+      # https://github.com/actions/cache
       - name: Get pnpm store directory
         id: pnpm-cache
         shell: bash
@@ -62,14 +63,24 @@ jobs:
         run: pnpm install
       
       - name: Build project
-        run: pnpm run build
+        run: pnpm run build      
 
+
+
+      - name: Smoke Test - one file
+        run: pnpm run test
+
+      # https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-nodejs
+      # also matrix here
+
+
+      # Don't upload to the actions page - artifact
       # https://github.com/actions/upload-artifact
-      - name: Upload production-ready build files
-        uses: actions/upload-artifact@v3
-        with:
-          name: production-files
-          path: ./dist
+      # - name: Upload production-ready build files
+      #   uses: actions/upload-artifact@v3
+      #   with:
+      #     name: production-files
+      #     path: ./dist
 
 # Not deploying right now
   # deploy:
