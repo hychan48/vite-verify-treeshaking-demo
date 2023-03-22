@@ -1,6 +1,6 @@
 import { describe, it} from 'mocha';
 import assert from 'node:assert';
-import {run as dist_run} from '##cwd/dist/vite-verify-treeshaking-demo.mjs'
+import {run as dist_run} from '##cwd/dist/index.mjs' // multi entry points renamed the file
 import fs from 'node:fs'
 /**
  * Expects to build first
@@ -13,7 +13,7 @@ describe('dist_ensure_exec.test.mjs', function(){
     assert.strictEqual(dist_run(),'hi')
   });
   it('compares file from static and dist <= 68', function(){
-    let out = fs.lstatSync('dist/vite-verify-treeshaking-demo.mjs').size
+    let out = fs.lstatSync('dist/index.mjs').size // og name with single entry
     let expected = fs.lstatSync('static/vite-verify-treeshaking-demo.mjs').size
     assert.strictEqual(out,expected)
     assert.ok(expected < 100)
