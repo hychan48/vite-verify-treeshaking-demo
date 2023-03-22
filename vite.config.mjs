@@ -24,7 +24,7 @@ export default defineConfig({
         // entry: fileURLToPath(new URL('./src/index.mjs', import.meta.url))
         entry:[ //"entry" can be a dictionary or array of multiple entry points
           fileURLToPath(new URL('./src/index.mjs', import.meta.url)),
-          fileURLToPath(new URL('./src/nested_function_static_example.mjs', import.meta.url)),
+          // fileURLToPath(new URL('./src/nested_function_static_example.mjs', import.meta.url)),
         ]
       }
 },
