@@ -1,4 +1,5 @@
 # vite-verify-treeshaking-demo
+https://github.com/hychan48/vite-verify-treeshaking-demo
 vite-verify-treeshaking-demo. can be used to publish as well
 
 # Setting up module resolve / imports
