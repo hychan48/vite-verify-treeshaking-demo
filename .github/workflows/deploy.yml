@@ -42,7 +42,8 @@ jobs:
         with:
           version: 8
           # https://www.npmjs.com/package/pnpm.
-          # at the time of writing version 7.29.1... well it's 8 now
+          # https://github.com/pnpm/pnpm/releases/latest
+          # v8.6.2
           run_install: false
 
       # https://github.com/actions/cache
