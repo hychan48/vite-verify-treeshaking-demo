@@ -1,6 +1,6 @@
 import { describe, it} from 'mocha';
 import assert from 'node:assert';
-import {run as dist_run} from '##cwd/dist/index.mjs' // multi entry points renamed the file
+import {run as dist_run} from '##/dist/index.mjs' // multi entry points renamed the file
 import fs from 'node:fs'
 /**
  * Expects to build first
