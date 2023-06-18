@@ -22,10 +22,10 @@
   },
   "imports": {
     "##/*": {
-      "default": "./src/*"
-    },
-    "##cwd/*": {
       "default": "./*"
+    },
+    "src/*": {
+      "default": "./src/*"
     }
   }
 }

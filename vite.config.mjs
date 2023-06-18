@@ -7,8 +7,8 @@ export default defineConfig({
   resolve: {
     alias: {
       //https://vitejs.dev/guide/build.html#library-mode
-      '##': fileURLToPath(new URL('./src', import.meta.url)),
-      '##cwd': fileURLToPath(new URL('./',import.meta.url))
+      '##': fileURLToPath(new URL('./',import.meta.url)),//might want to try # or @ again...
+      'src': fileURLToPath(new URL('./src', import.meta.url)),
     },
     extensions: [
       '.js',
