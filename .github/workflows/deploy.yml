@@ -40,9 +40,9 @@ jobs:
         name: Install pnpm
         id: pnpm-install
         with:
-          version: 7
+          version: 8
           # https://www.npmjs.com/package/pnpm.
-          # at the time of writing ersion 7.29.1
+          # at the time of writing version 7.29.1... well it's 8 now
           run_install: false
 
       # https://github.com/actions/cache
